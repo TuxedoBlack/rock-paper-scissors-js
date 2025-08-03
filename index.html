@@ -6,6 +6,41 @@
     <title>Rock Paper Scissors Game</title>
 </head>
 <body>
-    
+    <code>
+        Get user inputs their choice (rock, paper, scissors)
+        assign choice to variable of 1, 2 or 3.
+        computer will randomly select a number between 1 and 3.
+        for loop the choices and compare. If user chooses Rock and computer choose scissors, user wins.
+        Else If user chooses paper and computers chooses rock, user wins.
+        Else if user chooses scissors and computer chooses paper, user wins.
+        Else if user and computer choose the same thing, it is a tie.
+        Else computer wins.
+        Two variables will store amount of user input wins and computer wins.
+        loop 5 times. Whoever has the greatest number of wins between 5 rounds wins the game.
+    </code>
+    <script>
+        //ask user for input, store in a variable//
+        console.log("Hello World")
+        function getHumanChoice(){
+            let userInput = prompt("Pick either rock, paper, or scissors! ");
+            //convert input to all lowercase//
+            userInput = userInput.toLowerCase();
+            //convert string input to a integer variable//
+            if (userInput === "rock") {
+                userInput = 1;
+            }
+            else if (userInput === "paper") {
+                userInput = 2;
+            }
+            else {
+                userInput = 3;
+            }
+
+            return userInput;
+        }
+        console.log(getHumanChoice());
+        
+
+    </script>
 </body>
 </html>
