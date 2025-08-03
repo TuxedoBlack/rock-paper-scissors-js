@@ -24,7 +24,7 @@
         function getHumanChoice(){
             userInput = prompt("Pick either rock, paper, or scissors! ");
             //convert input to all lowercase//
-            userInput = userInput.toLowerCase();
+            //userInput = userInput.toLowerCase();//
             //convert string input to a integer variable (removed, not necessary)//
             /*if (userInput === "rock") {
                 userInput = 1;
@@ -86,7 +86,25 @@
                 computerScore += 1;
             }
         }
-        playRound(userInput,computerInput);
+        //playRound(userInput,computerInput);//
+    
+
+    function playGame(){
+        let gameRound = 0;
+        while (gameRound < 5){
+          gameRound += 1;
+          getHumanChoice();
+          getComputerChoice();
+          playRound(userInput, computerInput);  
+        }
+        if (humanScore > computerScore){
+            console.log("you beat the computer this game!");
+        }
+        else{
+            console.log("The computer beat you this game!")
+        }
+    }
+    playGame();
     </script>
 </body>
 </html>
